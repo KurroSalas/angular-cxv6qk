@@ -1,0 +1,30 @@
+<div class="contenedor-calculadora">
+  <h3>{{ nombreComponente }}</h3>
+
+  <div class="bloque">
+    <input
+      type="text"
+      type="number"
+      [(ngModel)]="cantidad"
+      (ngModelChange)="cantidad = cantidad === null ? 0 : cantidad"
+      (keyup.enter)="calcular()"
+    />
+  </div>
+
+  <div class="bloque">
+    <div class="acciones">
+      <ng-container *ngFor="let accion of (acciones | keyvalue).reverse()">
+        <span
+          class="accion"
+          (click)="operacion = accion.value"
+          [ngClass]="accion.value === operacion ? 'seleccionado' : ''"
+          >{{ accion.value }}</span
+        >
+      </ng-container>
+      <span class="accion calcular" (click)="calcular()">=</span>
+      <span class="accion restaurar" (click)="restaurar()">C</span>
+    </div>
+  </div>
+
+  <span class="bloque resultado">{{ resultado }}</span>
+</div>

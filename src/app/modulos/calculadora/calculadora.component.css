@@ -1,0 +1,64 @@
+.contenedor-calculadora {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-self: center;
+  width: fit-content;
+}
+
+.bloque {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.bloque:not(:first-child) {
+  margin-top: 20px;
+}
+
+.bloque.resultado {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 10px 20px;
+  background-color: lightgrey;
+}
+
+.acciones {
+  display: flex;
+  gap: 10px;
+}
+
+.acciones .accion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+  background-color: darkgrey;
+}
+
+.acciones .accion:hover {
+  background-color: grey;
+  cursor: pointer;
+}
+
+.acciones .seleccionado {
+  background-color: white;
+  border: 1px solid black;
+}
+
+.acciones .seleccionado:hover {
+  background-color: lightgrey;
+}
+
+.acciones .calcular {
+  background-color: black;
+  color: white;
+}
+
+.acciones .restaurar {
+  background-color: orangered;
+  color: white;
+}

@@ -1,0 +1,54 @@
+<form [formGroup]="formularioRegistro" (ngSubmit)="onSubmit($event)">
+  <div class="bloque">
+    <label for="nombre">{{ 'nombre' | titlecase }}</label>
+    <input type="text" [formControlName]="'nombre'" id="nombre" />
+  </div>
+
+  <div class="bloque">
+    <label for="apellido_1">{{ 'apellido_1' | titlecase }}</label>
+    <input type="text" [formControlName]="'apellido_1'" id="apellido_1" />
+  </div>
+
+  <div class="bloque">
+    <label for="apellido_2">{{ 'apellido_2' | titlecase }}</label>
+    <input type="text" [formControlName]="'apellido_2'" id="apellido_2" />
+  </div>
+
+  <div class="bloque">
+    <label for="email">{{ 'email' | titlecase }}</label>
+    <input type="text" [formControlName]="'email'" id="email" />
+  </div>
+
+  <input type="submit" value="Registrar" />
+</form>
+
+<div
+  class="mensaje-registro"
+  [ngClass]="mostrarMensajeNuevoUsuario ? '' : 'hidden'"
+>
+  Nuevo usuario registrado!
+</div>
+
+<div class="contenedor-lista-usuarios">
+  <app-lista-usuarios></app-lista-usuarios>
+</div>
+
+<div class="contenedor-metricas">
+  <app-metricas> </app-metricas>
+</div>
+
+<div class="contenedor-busqueda">
+  <app-busqueda></app-busqueda>
+</div>
+
+<div class="contenedor-calculadora">
+  <app-calculadora></app-calculadora>
+</div>
+
+<div>
+  <app-empresa></app-empresa>
+</div>
+
+<div>
+  <app-lista-compra></app-lista-compra>
+</div>

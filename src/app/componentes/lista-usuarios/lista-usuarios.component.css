@@ -1,0 +1,17 @@
+.contenedor-lista-usuarios {
+}
+
+.contenedor-lista-usuarios .lista-usuarios {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contenedor-lista-usuarios .lista-usuarios .usuario {
+  display: flex;
+  flex-direction: column;
+}
+
+.bold {
+  font-weight: bold;
+}

@@ -1,0 +1,34 @@
+p {
+  font-family: Lato;
+}
+
+.contenedor {
+  width: 400px;
+  height: 450px;
+}
+
+form > .bloque {
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+}
+
+form > .bloque:not(:first-child) {
+  margin-top: 10px;
+}
+
+form > input[type='submit'] {
+  margin-top: 25px;
+}
+
+.contador-usuarios {
+  margin-top: 30px;
+}
+
+.contenedor-metricas {
+  margin-top: 30px;
+}
+
+.hidden {
+  display: none;
+}

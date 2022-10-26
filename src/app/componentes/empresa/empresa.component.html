@@ -1,0 +1,22 @@
+<div class="contenedor-empresa">
+  <h3>COMPONENTE EMPRESA</h3>
+
+  <form [formGroup]="formularioRegistro" (ngSubmit)="onSubmit()">
+    <div class="bloque">
+      <label for="">{{ 'nombre' | titlecase }}</label>
+      <input type="text" formControlName="nombre" />
+
+      <span class="error" *ngIf="esFormularioErroneo && formularioRegistro?.get('nombre')?.errors !== null">Valor no válido</span>
+    </div>
+    <div class="bloque">
+      <label for="">{{ 'email' | titlecase }}</label>
+      <input type="text" formControlName="email" />
+
+      <span class="error" *ngIf="esFormularioErroneo && formularioRegistro?.get('email')?.errors">Valor no válido</span>
+    </div>
+
+    <input type="submit" value="Registrar" />
+  </form>
+
+  <span *ngIf="empresaCreada" class="mensaje-exito">Empresa creada correctamente!</span>
+</div>

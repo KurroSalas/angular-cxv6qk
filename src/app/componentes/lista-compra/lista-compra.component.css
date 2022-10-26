@@ -1,0 +1,6 @@
+.contenedor-lista-compra .bloque {
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}

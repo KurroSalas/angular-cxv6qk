@@ -1,0 +1,30 @@
+<div class="contenedor-lista-usuarios">
+  <h3>COMPONENTE DE LISTADO DE USUARIOS</h3>
+
+  <div class="lista-usuarios" *ngIf="listaUsuarios.length > 0">
+    <ng-container
+      *ngFor="let usuario of listaUsuarios"
+      [ngTemplateOutlet]="elementoLista"
+      [ngTemplateOutletContext]="{ usuario: usuario }"
+    ></ng-container>
+  </div>
+
+  <br />
+  <span *ngIf="cargando">Cargando...</span>
+  <span *ngIf="error">{{ error }}</span>
+</div>
+
+<ng-template #elementoLista let-usuario="usuario">
+  <div class="usuario">
+    <span><label class="bold">Nombre</label>: {{ usuario.nombre }}</span>
+    <span
+      ><label class="bold">Primer apellido</label>:
+      {{ usuario.apellido_1 }}</span
+    >
+    <span
+      ><label class="bold">Segundo apellido</label>:
+      {{ usuario.apellido_2 }}</span
+    >
+    <span><label class="bold">Correo</label>: {{ usuario.email }}</span>
+  </div>
+</ng-template>

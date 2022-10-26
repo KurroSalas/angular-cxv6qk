@@ -1,0 +1,18 @@
+<div class="contenedor-lista-compra">
+  <h3>COMPONENTE LISTA DE LA COMPRA</h3>
+
+  <div class="bloque">
+    <input type="text" [(ngModel)]="inputLista" (keyup.enter)="guardarNuevoItem()">
+    <input type="button" (click)="guardarNuevoItem()" value="Guardar">
+
+    <span>Total de elementos en la lista: {{ total }}</span>
+  </div>
+
+  <div class="contenedor-detalle">
+   <app-detalle
+    [nuevoItem]="nuevoItem"
+    (totalItems)="actualizarTotal($event)"
+   ></app-detalle>
+  </div>
+
+</div>

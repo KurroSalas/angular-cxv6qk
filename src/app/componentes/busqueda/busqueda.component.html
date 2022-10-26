@@ -1,0 +1,15 @@
+<h3>COMPONENTE DE BÚSQUEDA</h3>
+
+<form [formGroup]="formularioBusqueda" (ngSubmit)="onSubmit($event)">
+  <div class="bloque">
+    <label for="email">{{ 'email' | titlecase }}</label>
+    <input type="text" [formControlName]="'email'" id="email" />
+  </div>
+
+  <input type="submit" value="Buscar" />
+</form>
+
+<br />
+<span *ngIf="cargando">Cargando...</span>
+<span *ngIf="usuario && !error" [innerHTML]="usuario | dato"></span>
+<span *ngIf="error && !usuario">{{ error }}</span>

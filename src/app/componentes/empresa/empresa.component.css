@@ -1,0 +1,14 @@
+.bloque {
+  display: flex;
+  flex-direction: column;
+}
+
+.error {
+  color: red;
+}
+
+.mensaje-exito {
+  display: flex;
+  margin-top: 30px;
+  color: green;
+}
